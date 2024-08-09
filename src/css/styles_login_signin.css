@@ -1,0 +1,273 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  
+  body , .cd__main{
+    overflow-y: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-image: url(../img/WAVES_BACKGROUND_02.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 100px;
+    background-color: #020014 !important;
+  }
+
+  #frameTransition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .frameImg-none {
+    display: none;
+  }
+
+  .frameImg-valid {
+    display: block;
+  }
+
+  .frameTransition-none {
+    display: none;
+  }
+
+  .frameTransitionCad-none {
+    display: none;
+  }
+
+  .frameTransition-valid {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    animation: frameTransitionVai 1s ease;
+  }
+
+  .frameTransitionCad-valid {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    animation: frameTransitionVolta 1s ease;
+  }
+
+  #logo {
+    width: 98px;
+    height: 47px;
+    position: absolute;
+    top: 22px;
+    left: 64px;
+  }
+
+  #logo-login {
+    width: 98px;
+    height: 47px;
+    position: absolute;
+    top: 22px;
+    left: calc(100vw - 162px);
+  }
+
+  .main {
+    display: flex;
+    position: relative;
+    width: 968px;
+    min-width: 968px;
+    min-height: 704px;
+    height: 704px;
+    background-color: #020014;
+    border: 2px solid #FF0149;
+    border-radius: 12px;
+    box-shadow: #ff0149a6 0px 0px 25px;
+    overflow: hidden;
+  }
+
+  .main-log{
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: 1200px) {
+    .main {
+      transform: scale(0.7);
+    }
+  }
+  @media (max-width: 1000px) {
+    .main {
+      transform: scale(0.6);
+    }
+  }
+  @media (max-width: 800px) {
+    .main {
+      transform: scale(0.5);
+    }
+  }
+  @media (max-width: 600px) {
+    .main {
+      transform: scale(0.4);
+    }
+  }
+  
+  .container {
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid #FF0149;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #ff0149a6 0px 0px 25px;
+  }
+
+  .container-login {
+    border: none;
+    border-left: 1px solid #FF0149;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border: 2px solid #FF0149;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: #ff0149a6 0px 0px 25px;
+  }
+  
+
+  .switch {
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/SINGUP_BACKGROUND.png);
+    background-repeat: no-repeat;
+    border-left: 1px solid #FF0149;
+    background-position: 0 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .switch-login {
+    border: none;
+    border-right: 1px solid #FF0149;
+    background-image: url(../img/LOGIN_BACKGROUND.png);
+  }
+
+  .btn_switch {
+    margin-top: 16px;
+  }
+
+  /* INPUTS */
+
+  .input-group {
+    position: relative;
+  }
+
+  .input-group__input {
+    z-index: 100;
+    font-family: Helvetica;
+    font-size: 10pt;
+    color: #ffffff;
+    padding: 15px 0 15px 10px;
+    border: none;
+    border-radius: 16px;
+    width: 322px;
+    height: 40px;
+    outline: 2px solid #FF0149;
+    background-color: transparent;
+    transition: outline-color 500ms;
+  }
+
+  .input-group__input:is(:focus, :valid) {
+    outline-color: #FF0149;
+  }
+
+  .input-group__label {
+    font-family: 'AnonymousPro-Regular', monospace;
+    font-size: 11pt;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: 10px 12px;
+    color: #fff;
+    cursor:text;
+    transition: translate 500ms, scale 500ms;
+  }
+
+  .input-group__input:focus + .input-group__label, .input-group__input:valid + .input-group__label {
+    padding-inline: 5px;
+    translate: 10px -10px;
+    scale: 0.9;
+    background-color: #020014;
+  }
+
+  .lnr {
+    position: absolute;
+    top: 6px;
+    left: 283px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .lnr-eye {
+    background-image: url(../img/OLHO_FECHADO.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  #submit_login {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  #input_form_cadastrar-valid {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  /**/
+
+  .title {
+    font-family: 'Anton-Regular', sans-serif;
+    color: #ffffff;
+    font-size: 44pt;
+    text-align: center;
+  }
+
+  .form_title {
+    font-size: 32pt;
+  }
+  
+  .description {
+    width: 444px;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 18pt;
+    text-align: center;
+  }
+  
+  @keyframes frameTransitionVai {
+    0% { background: transparent }
+    100% { background: #FF0149 }
+   }
+
+   @keyframes frameTransitionVolta {
+    0% { background: #FF0149 }
+    100% { background: transparent }
+   }

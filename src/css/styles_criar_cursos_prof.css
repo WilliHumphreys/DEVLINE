@@ -1,0 +1,402 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/WAVES_BACKGROUND_01.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#logo {
+    width: auto;
+    height: 47px;
+    position: absolute;
+    top: 22px;
+    left: 64px;
+  }
+
+  .main_criar_curso_prof {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* FORMULARIO CURSO */
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 80px 0 64px 0;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+  .left::-webkit-scrollbar {
+    width: 12px;
+  }
+    
+  .left::-webkit-scrollbar-track {
+      background: #440013;
+  }
+    
+  .left::-webkit-scrollbar-thumb {
+      background-color: #FF0149; 
+      border-radius: 20px;
+      border: 3px solid #440013;
+  }
+
+  .left form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border: 2px solid #FF0149;
+    border-radius: 16px;
+    margin-top: 16px;
+    box-shadow: #ff0149a6 0px 0px 25px;
+    background: #020014;
+    z-index: 100;
+  }
+
+  .title_criar_curso_prof {
+    font-family: 'Anton-Regular', monospace;
+    color: #ffffff;
+    font-size: 22pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .sec_file_banner {
+    z-index: 100;
+    border: none;
+    border-radius: 16px;
+    width: 322px;
+    height: 40px;
+    outline: 2px solid #FF0149;
+    background-color: transparent;
+    transition: outline-color 500ms;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .sec_file_banner input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .sec_file_banner label {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .label_file_banner {
+    width: 322px;
+    height: 40px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: 'AnonymousPro-Regular', monospace;
+    font-size: 11pt;
+    color: #ffffff;
+    padding: 12px 0 15px 10px;
+  }
+
+  .input-group {
+    position: relative;
+  }
+
+  .input-group__input {
+    z-index: 100;
+    font-family: Helvetica;
+    font-size: 10pt;
+    color: #ffffff;
+    padding: 15px 0 15px 10px;
+    border: none;
+    border-radius: 16px;
+    width: 322px;
+    height: 40px;
+    outline: 2px solid #FF0149;
+    background-color: transparent;
+    transition: outline-color 500ms;
+  }
+
+  .input-group__input:is(:focus, :valid) {
+    outline-color: #FF0149;
+  }
+
+  .input-group__label {
+    font-family: 'AnonymousPro-Regular', monospace;
+    font-size: 11pt;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: 10px 12px;
+    color: #fff;
+    cursor:text;
+    transition: translate 500ms, scale 500ms;
+  }
+
+  .input-group__input:focus + .input-group__label, .input-group__input:valid + .input-group__label {
+    padding-inline: 5px;
+    translate: 10px -10px;
+    scale: 0.9;
+    background-color: #020014;
+  }
+
+  .input_prof {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    background: #020014;
+    border-radius: 16px;
+    width: 322px;
+    height: 40px;
+    border: 2px solid #FF0149;
+    color: #ffffff;
+    padding-left: 10px;
+    background: url(../img/chevron-double-down.png) no-repeat center right ;
+    background-position: calc(100% - 10px) 50%;
+    background-size: 20px;
+}
+
+.option_prof {
+    background: #020014;
+    color: #ffffff;
+}
+
+/* PRÉ VISUALIZAÇÃO DO CURSO */
+
+.right {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: #020014;
+    border-left: 2px solid #FF0149;
+    box-shadow: #ff0149a6 0px 0px 25px;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+  .right::-webkit-scrollbar {
+    width: 12px;
+  }
+    
+  .right::-webkit-scrollbar-track {
+      background: #440013;
+  }
+    
+  .right::-webkit-scrollbar-thumb {
+      background-color: #FF0149; 
+      border-radius: 20px;
+      border: 3px solid #440013;
+  }
+
+.top_banner_capa {
+    width: 100%;
+    height: 320px;
+    position: relative;
+}
+
+.banner_prof {
+    width: 100%;
+    height: 320px;
+    box-shadow: #ffffffa6 0px 0px 25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_prof img {
+  width: 100%;
+  height: auto;
+}
+
+.capa_name_prof {
+    position: absolute;
+    left: 32px;
+    bottom: -64px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: baseline;
+}
+
+.capa_prof {
+    width: 256px;
+    height: 256px;
+    border-radius: 128px;
+    box-shadow: #ffffffa6 0px 0px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.capa_prof img {
+  width: 100%;
+  height: 100%;
+}
+
+.name_curso_prof {
+    font-family: 'Anton-Regular', monospace;
+    color: #ffffff;
+    font-size: 28pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 512px;
+}
+
+.btn_desc_criar_curso_prof {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 34px;
+    position: absolute;
+    left: 50px;
+    top: 400px;
+}
+
+.btn_criar_curso {
+    cursor: default;
+    width: 220px;
+    height: 40px;
+    background: #FF0149;
+    border: 2px solid #FF0149;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'AnonymousPro-Regular', monospace;
+    font-size: 12pt;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.desc_exibir_criar_curso {
+    max-width: 512px;
+    font-family: 'AnonymousPro-Regular', monospace;
+    font-size: 11pt;
+    color: #ffffff;
+    text-align: justify;
+    width: 512px;
+
+}
+
+/* EXIBIR MODULOS */
+
+.exibir_capa_mod {
+  width: 100%;
+  height: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.exibir_capa_mod img {
+  width: 100%;
+  height: auto;
+}
+
+.sec_mod_exibir {
+  position: absolute;
+  top: 500px;
+  left: 0;
+  width: 100%;
+}
+
+.title_sec_mod_exibir {
+  margin-left: 64px;
+  margin-bottom: 20px;
+  font-family: 'Anton-Regular', monospace;
+  color: #ffffff;
+  font-size: 22pt;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mod_exibir_grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 240px 240px 240px;
+  justify-content: center;
+  gap: 40px;
+  padding-bottom: 64px;
+}
+
+.card_mod {
+  width: 100%;
+  height: 320px;
+  border: 2px solid #FF0149;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.title_mod {
+  font-family: 'Anton-Regular', monospace;
+  color: #ffffff;
+  font-size: 16pt;
+  letter-spacing: 1px;
+}
+
+.desc_mod {
+  width: 90%;
+  text-align: justify;
+  font-family: 'AnonymousPro-Regular', monospace;
+  color: #ffffff;
+  font-size: 11pt;
+  overflow: auto;
+  padding-bottom: 32px;
+}
+
+.desc_mod::-webkit-scrollbar {
+  width: 0;
+}
+
+.desc_mod:hover ~ .hover_card {
+  opacity: 100;
+}
+
+.hover_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: #FF0149;
+  opacity: 0;
+  background: rgb(255,1,73);
+  background: linear-gradient(0deg, rgba(255,1,73,0.8) 0%, rgba(255,1,73,0) 100%);
+  transition: all ease .3s;
+}
+
+.hover_card:hover {
+  opacity: 100;
+}
+
+.hover_card img {
+  width: 24px;
+  height: auto;
+}

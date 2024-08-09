@@ -1,0 +1,218 @@
+body {
+    width: 100%;
+}
+
+section#header_display {
+    width: 100%;
+    height: 96px;
+    background-color: #020014;
+    border-bottom: 1px solid #FF0149;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 64px 0 64px;
+    z-index: 999;
+}
+
+nav#menu_itens, .menu_itens_ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+nav#menu_itens .menu_itens_ul section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+a.itens {
+    border-bottom: 3px solid transparent;
+    padding: 0 4px 36px 4px;
+}
+
+a.itens:hover {
+    transition: ease .4s;
+    border-bottom: 3px solid #FF0149;
+    padding-bottom: 6px;
+}
+
+.profile_image {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #FF0149;
+    border-radius: 32px;
+}
+
+.profile_image:hover {
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 10px 0px;
+}
+
+.profile_image img {
+    width: 46px;
+    height: 46px;
+    border-radius: 32px;
+}
+
+#header_hamburguer {
+    display: none;
+}
+
+.menu-lines {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.menu-lines span {
+    display: block;
+    width: 32px;
+    height: 4px;
+    margin-bottom: 8px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: all ease .4s;
+}
+
+.menu-lines span:nth-child(3) {
+    margin-bottom: 0;
+}
+
+#menu-faketrigger {
+    position: absolute;
+    visibility: hidden;
+}
+
+.ul_menu_h_itens {
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #FF0149;
+    border-top: none;
+    background: #FF0149;
+    list-style: none;
+    position: absolute;
+    top: 96px;
+    left: calc(100% - 320px);
+    width: 320px;
+    height: calc(100vh - 96px);
+    margin-left: 320px;
+    transition: all ease .6s;
+}
+
+.ul_menu_h_itens label {
+    width: 100%;
+}
+
+.menu_h_itens {
+    color: #ffffff;
+    padding-left: 16px;
+    text-decoration: none;
+    font-family: 'AnonymousPro-Regular', monospace;
+    font-size: 12pt;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    height: 64px;
+    border-bottom: 2px solid #FF0149;
+    cursor: pointer;
+}
+
+.align_links_menu_h {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_h_sair {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    padding: 18px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease .2s;
+}
+
+.text_sair {
+    height: 10px;
+    font-family: 'AnonymousPro-Regular', monospace;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#input_sair {
+    visibility: hidden;
+    position: absolute;
+}
+
+#input_sair:checked ~ .menu_h_sair {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.menu_h_itens:hover {
+    background: #FF0149;
+}
+
+.menu_h_itens img {
+    width: 24px;
+    height: 24px;
+}
+
+.bgMenu {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 998;
+    position: absolute;
+    top: 96px;
+    left: 0;
+    background-color: #ff01496b;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100vh;
+    transition: all ease .6s;
+}
+
+#menu-faketrigger:checked ~ .bgMenu {
+    visibility: visible;
+    opacity: 100%;
+}
+
+#menu-faketrigger:checked ~ .menu-lines span:nth-child(1) {
+    transform-origin: 0% 0%;
+    transform: rotate(45deg) scaleX(1.12);
+    background: #FF0149;
+}
+
+#menu-faketrigger:checked ~ .menu-lines span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-faketrigger:checked ~ .menu-lines span:nth-child(3) {
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) scaleX(1.12);
+    background: #FF0149;
+}
+
+#menu-faketrigger:checked ~ .ul_menu_h_itens {
+    margin-left: 0;
+    background: #020014;
+}

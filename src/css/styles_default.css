@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Anton-Regular';
+    src: url("../fonts/Anton-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'AnonymousPro-Regular';
+    src: url("../fonts/AnonymousPro-Regular.ttf");
+}
+
+.session_false {
+    display: none;
+}
+
+.session_true {
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #020014;
+}
+
+.body_corection {
+    margin-top: 100px;
+}
+
+.gif_ghost {
+    width: 86.6mm;
+    height: 53.88mm;
+    border: 2px solid #FF0149;
+    box-shadow: #ff0149a6 0px 0px 35px;
+    border-radius: 16px;
+}
+
+header {
+    box-shadow: #FF014926 0px 18px 25px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+footer {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+img.logo {
+    width: 98px;
+    height: 47px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF0149;
+    border: 2px solid #FF0149;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #FF0149;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 10px 0px;
+    transition: .3s;
+}
+
+.button a {
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #020014;
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.transparent a {
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.small {
+    width: 128px;
+    height: 32px;
+    border-radius: 8px;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.medium {
+    width: 256px;
+    height: 48px;
+    border-radius: 16px;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.large {
+    width: 512px;
+    height: 72px;
+    border-radius: 16px;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: #440013;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #FF0149; 
+    border-radius: 20px;
+    border: 3px solid #440013;
+}

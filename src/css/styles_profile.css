@@ -1,0 +1,344 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.main_profile {
+    background-image: url(../img/WAVES_BACKGROUND_02.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 128px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#card_profile {
+    width: 90%;
+    height: 90%;
+    border: 2px solid #FF0149;
+    border-radius: 16px;
+    background-color: #020014;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.icon_dvbucks {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.dv_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-left: 2px solid #FF0149;
+    border-bottom: 2px solid #FF0149;
+    padding: 8px 32px 8px 32px;
+    border-radius: 0 0 0 16px;
+}
+
+.dvbucks {
+    font-family: 'AnonymousPro-Regular';
+    font-size: 32pt;
+    color: #ffffff;
+}
+
+.avatar_rank {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: lest baseline;
+}
+
+.avatar_username {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar_container_hover {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: calc(0);
+    left: calc(0);
+    justify-content: center;
+    align-items: center;
+    width: 288px;
+    height: 288px;
+    border-radius: 144px;
+    cursor: pointer;
+    background: #02001497;
+    border: 2px solid #FF0149;
+    transition: all ease .2s;
+}
+
+.avatar_container:hover ~ .avatar_container_hover{
+    visibility: visible;
+    opacity: 100%;
+}
+
+.avatar_container_hover:hover {
+    visibility: visible;
+    opacity: 100%;
+}
+
+#edit_img {
+    width: 32px;
+    height: 32px;
+}
+
+.avatar_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 288px;
+    height: 288px;
+    border-radius: 144px;
+    cursor: pointer;
+}
+
+.avatar_container img {
+    width: 288px;
+    height: 288px;
+    border-radius: 144px;
+}
+
+.user_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 288px;
+}
+
+.username {
+    font-family: 'AnonymousPro-Regular';
+    font-size: 32pt;
+    color: #FF0149;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 36px;
+}
+
+#edit_username {
+    visibility: hidden;
+    opacity: 0;
+    margin-left: 4px;
+    transition: all ease .2s;
+}
+
+.username:hover ~ #edit_username {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.hex_rank {
+    background-image: url(../img/RANK_BG.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 346px;
+}
+
+.hex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rank {
+    font-family: 'Anton-Regular';
+    font-size: 62pt;
+    color: #ffffff;
+}
+
+#king_rank {
+    position: absolute;
+    margin-bottom: 190px;
+}
+
+.rank_text {
+    font-family: 'AnonymousPro-Regular';
+    font-size: 28pt;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* PROFILE PROFESSOR */
+
+.avatar_rank_prof {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 64px;
+}
+
+.avatar_username_hexg {
+    width: 53.88mm;
+    height: 86.6mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    box-shadow: #ff0149a6 0px 0px 35px;
+    border-radius: 16px;
+    padding: 16px;
+    padding-top: 46px;
+    position: relative;
+    background-image: url(../img/WAVES_BACKGROUND_02.png);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+ #hexagono:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-left: 64px solid #020014;
+    border-right: 64px solid #020014;
+    border-bottom: 32px solid transparent;
+ }
+
+ #hexagono:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 64px solid #020014;
+    border-right: 64px solid #020014;
+    border-top: 32px solid transparent;
+ }
+
+ .avatar_container_hover_hexg {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: calc(0);
+    left: calc(0);
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+    background: #02001497;
+    transition: all ease .2s;
+}
+
+.avatar_container_hexg:hover ~ .avatar_container_hover_hexg{
+    visibility: visible;
+    opacity: 100%;
+}
+
+.avatar_container_hover_hexg:hover {
+    visibility: visible;
+    opacity: 100%;
+}
+
+#edit_img {
+    width: 32px;
+    height: 32px;
+}
+
+.avatar_container_hexg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 128px;
+    height: 128px;
+    border-radius: 64px;
+    cursor: pointer;
+}
+
+.avatar_container_hexg img {
+    width: 128px;
+    height: 128px;
+    border-radius: 64px;
+}
+
+.username_hexg {
+    font-family: 'AnonymousPro-Regular';
+    font-size: 16pt;
+    color: #FF0149;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+#edit_username_hexg {
+    visibility: hidden;
+    opacity: 0;
+    margin-left: 4px;
+    transition: all ease .2s;
+    width: 20px;
+    height: auto;
+}
+
+.username_hexg:hover ~ #edit_username_hexg {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.txt_professor {
+    font-family: 'AnonymousPro-Regular';
+    font-size: 14pt;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border: 2px solid #FF0149;
+    padding: 4px 32px 4px 32px;
+    border-radius: 30px;
+}
+
+.logo_card_prof_front {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    left: 10px;
+    top: 4px;
+}
+
+.card_btns_profile_prof {
+    padding: 16px;
+    height: auto;
+    border: 2px solid #FF0149;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}

@@ -1,0 +1,748 @@
+.modalBg {
+    background-color: #ff01496b;
+    backdrop-filter: blur(2px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+}
+
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1550;
+    width: 40%;
+    height: 40%;
+    overflow: auto;
+    background-color: #020014;
+    border: 2px solid #FF0149;
+    border-radius: 16px;
+    box-shadow: #ff0149a6 0px 0px 25px;
+}
+
+.error_alert {
+    width: 448px;
+    height: 224px;
+}
+
+.align_btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.modal_adm {
+  padding: 32px;
+  width: 600px;
+}
+
+.text_modal_adm {
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 20pt;
+}
+
+.text_modal_adm strong {
+  color: #FF0149;
+}
+
+/* MODAL PACKS PAGAMENTO */
+
+.modal_pag_pack {
+  width: 800px;
+  height: 600px;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+  background-image: url(../img/WAVES_BACKGROUND_02.png);
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: 0 250px;
+}
+
+.modal_pag_pack .modal_content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  gap: 0;
+}
+
+.md_cont_left {
+  width: 40%;
+  height: 100%;
+}
+
+.md_cont_right {
+  width: 60%;
+  height: 100%;
+  border-left: 2px solid #FF0149;
+  box-shadow: #ff0149a6 0px 0px 25px;
+}
+
+.sec_mod_pag_title, .sec_mod_pag_res, .sec_mod_pag_val, .sec_mod_pag_btn {
+  width: 100%;
+}
+
+.sec_mod_pag_title, .sec_mod_pag_res, .sec_mod_pag_val {
+  border-bottom: 1px solid #FF0149;
+}
+
+.sec_mod_pag_title {
+  padding-left: 16px;
+  height: 8%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #FF0149;
+}
+
+.sec_mod_pag_title h2 {
+  font-family: 'Anton-regular', sans-serif;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-size: 22pt;
+}
+
+.sec_mod_pag_res {
+  padding: 8px;
+  height: 20%;
+  font-family: 'AnonymousPro-Regular', monospace;
+  color: #ffffff;
+  font-size: 12pt;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sec_mod_pag_res h2 {
+  text-transform: uppercase;
+}
+
+.sec_mod_pag_val {
+  padding: 8px;
+  height: 60%;
+  font-family: 'AnonymousPro-Regular', monospace;
+  color: #ffffff;
+  font-size: 12pt;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sec_mod_pag_val h2 {
+  text-transform: uppercase;
+}
+
+.sec_mod_pag_val span {
+  font-size: 18pt;
+}
+
+.sec_mod_pag_btn {
+  height: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.md_muda_variavel {
+  display: none;
+}
+
+/* MODAL ALTERAR FOTO DE PERFIL */
+
+.avatar_profile {
+  width: 80%;
+  height: 90%;
+  overflow: none;
+}
+
+.avatar_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #ffffff26 0px 0px 100px 5px;
+}
+
+.inp_avatar_default {
+  visibility: hidden;
+  position: relative;
+}
+
+.text_avatar {
+  width: 100%;
+  height: 80px;
+  background-color: #FF0149;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  letter-spacing: 1px;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 20pt;
+}
+
+.avatar_image_overflow {
+  height: calc(100% - 180px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  top: 80px;
+  padding: 0 32px 32px 32px;
+}
+
+.avatar_image_overflow::-webkit-scrollbar {
+  width: 12px;
+}
+
+.avatar_image_overflow::-webkit-scrollbar-track {
+  background: #440013;
+}
+
+.avatar_image_overflow::-webkit-scrollbar-thumb {
+  background-color: #FF0149; 
+  border-radius: 20px;
+  border: 3px solid #440013;
+}
+
+.avatar_image_grid {
+  margin-top: 32px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 160px 160px 160px 160px;
+  gap: 32px;
+}
+
+.avatar_image {
+  width: 160px;
+  height: 160px;
+  border: 2px solid #FF0149;
+  border-radius: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom {
+  width: 100%;
+  height: 100%;
+  border-radius: 144px;
+}
+
+.default {
+  border-radius: 128px;
+  width: 100%;
+  height: 100%;
+}
+
+.avatar_buttons {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background: #020014;
+  border-top: 2px solid #FF0149;
+  z-index: 350;
+  position: absolute;
+  top: calc(100% - 100px);
+}
+
+/* MODAL ALTERAR USERNAME */
+
+.update_user_modal {
+  width: 400px;
+}
+
+.user_mod_content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_update_username {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+
+.form_update_username_password {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit_username_class {
+  visibility: hidden;
+  position: relative;
+}
+
+.username_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+#btn_username_submit-invalid {
+  background-color: transparent;
+  border: 2px solid #999999;
+  color: #999999;
+}
+
+#btn_username_submit {
+  display: none;
+}
+
+.btn_username {
+  width: 152px;
+  height: 40px;
+  border-radius: 8px;
+  font-family: 'AnonymousPro-Regular', monospace;
+  color: #ffffff;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.title_user_modal {
+  letter-spacing: 1px;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 20pt;
+  text-align: center;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group__input {
+  z-index: 100;
+  font-family: Helvetica;
+  font-size: 10pt;
+  color: #ffffff;
+  padding: 15px 0 15px 10px;
+  border: none;
+  border-radius: 16px;
+  width: 322px;
+  height: 40px;
+  outline: 2px solid #FF0149;
+  background-color: transparent;
+  transition: outline-color 500ms;
+}
+
+.input-group__input:is(:focus, :valid) {
+  outline-color: #FF0149;
+}
+
+.input-group__label {
+  font-family: 'AnonymousPro-Regular', monospace;
+  font-size: 11pt;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  translate: 10px 12px;
+  color: #fff;
+  cursor:text;
+  transition: translate 500ms, scale 500ms;
+}
+
+.input-group__input:focus + .input-group__label, .input-group__input:valid + .input-group__label {
+  padding-inline: 5px;
+  translate: 10px -10px;
+  scale: 0.9;
+  background-color: #020014;
+}
+
+.lnr {
+  position: absolute;
+  top: 6px;
+  left: 283px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.lnr-eye {
+  background-image: url(../img/OLHO_FECHADO.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* MODAL TERMOS E POLITICAS DE PRIVACIDADE */
+
+.card_termos {
+    width: 100%;
+    height: 300px;
+    padding: 16px;
+    border: 2px solid #FF0149;
+    background: transparent;
+    color: #ffffff;
+    font-family: 'AnonymousPro-Regular', monospace;
+    font-size: 10pt;
+    overflow: auto;
+}
+
+.card_termos::-webkit-scrollbar {
+    width: 12px;
+}
+  
+.card_termos::-webkit-scrollbar-track {
+    background: #440013;
+}
+  
+.card_termos::-webkit-scrollbar-thumb {
+    background-color: #FF0149; 
+    border-radius: 20px;
+    border: 3px solid #440013;
+}
+
+.valid_alert {
+    overflow-y: hidden;
+    width: 720px;
+    height: 600px;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.modal_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.text_modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+
+.icon_error {
+    width: 64px;
+    height: 64px;
+}
+
+.text_valid {
+    letter-spacing: 1px;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 20pt;
+    text-align: left;
+}
+
+.text_error {
+    width: 330px;
+    letter-spacing: 1px;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 20pt;
+    text-align: left;
+}
+
+.checkboxs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.checkbox_align {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+
+.text_checkbox {
+    margin-top: 4px;
+    font-family: 'Anonymous Pro', monospace;
+    color: #ffffff;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.checkbox-btn {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .checkbox-btn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkbox-btn label {
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 2.5px solid #ffffff;
+    transition: .2s linear;
+  }
+
+  .checkbox_error {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 2.5px solid #FF0149;
+    transition: .2s linear;
+    animation: horizontal-shaking 0.4s ease-in;
+  }
+
+  .checkbox-btn input:checked ~ .checkmark {
+    background-color: transparent;
+  }
+
+  .checkbox-btn input:checked ~ .checkbox_error {
+    background-color: transparent;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 50%;
+    top: 40%;
+    width: 10px;
+    height: 14px;
+    border: 2px solid #00ff62;
+    filter: drop-shadow(0px 0px 10px #00ff62);
+    border-width: 0 2.5px 2.5px 0;
+    transition: .2s linear;
+    transform: translate(-50%, -50%) rotate(-90deg) scale(0.2);
+  }
+  
+  .checkbox_error:after {
+    content: "";
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 50%;
+    top: 40%;
+    width: 10px;
+    height: 14px;
+    border: 2px solid #00ff62;
+    filter: drop-shadow(0px 0px 10px #00ff62);
+    border-width: 0 2.5px 2.5px 0;
+    transition: .2s linear;
+    transform: translate(-50%, -50%) rotate(-90deg) scale(0.2);
+  }
+
+  .checkbox-btn input:checked ~ .checkmark:after {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    animation: pulse 1s ease-in;
+  }
+
+  .checkbox-btn input:checked ~ .checkbox_error:after {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    animation: pulse 1s ease-in;
+  }
+  
+  .checkbox-btn input:checked ~ .checkmark{
+    transform: rotate(45deg);
+    border: none;
+  }
+
+  .checkbox-btn input:checked ~.checkbox_error{
+    transform: rotate(45deg);
+    border: none;
+  }
+
+  #validateCheckBox {
+    display: none;
+  }
+
+  .input_form_cadastrar-none {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .input_form_cadastrar-valid {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .btn_invalid_modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #999999;
+    color: #999999;
+    cursor: pointer;
+    width: 256px;
+    height: 48px;
+    border-radius: 16px;
+    font-family: 'AnonymousPro-Regular', monospace;
+    font-size: 12pt;
+    font-weight: bold;
+  }
+
+  #btn_cadastrar_modal-none {
+    display: flex;
+  }
+
+  #btn_cadastrar_modal-valid {
+    display: none;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(0deg) scale(1.6);
+    }
+  }
+
+  @keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(2px) }
+    50% { transform: translateX(-2px) }
+    75% { transform: translateX(2px) }
+    100% { transform: translateX(0) }
+   }
+
+   /* MODAL ALTERAR CARTÃO */
+
+   .modal_card_exibir {
+      padding: 16px;
+      height: auto;
+      background-image: url(../img/WAVES_BACKGROUND_02.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: bottom;
+   }
+
+   .modal_card_exibir .modal_content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+   }
+
+   .x_fechar_modal {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    transition: all .3s;
+   }
+
+   .x_fechar_modal img {
+    width: 16px;
+    height: auto;
+   }
+
+   .x_fechar_modal:hover {
+    background: #FF0149;
+   }
+
+   /* MODAL ATIVAR CURSOS */
+
+   .modal_error_ativar_curso {
+    width: auto;
+    height: auto;
+    padding: 32px;
+   }
+
+   .msg_error_curso_limite {
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 20pt;
+   }
+
+   .cursos_ativos_msg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 20pt;
+   }
+
+   .msg_seja_dv_curso {
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 16pt;
+    text-align: center;
+   }

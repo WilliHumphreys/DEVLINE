@@ -1,0 +1,269 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.main_pag_curso {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.cursos_ativos {
+    position: fixed;
+    right: 0;
+    top: 96px;
+    z-index: 100;
+    padding: 16px;
+    background: #FF0149;
+    border-radius: 0 0 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 14pt;
+    box-shadow: #ff0149a6 0px 0px 25px;
+}
+
+.sec_banner_top {
+    width: calc(100% - 128px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-left: 2px solid #FF0149;
+    border-right: 2px solid #FF0149;
+    border-bottom: 2px solid #FF0149;
+    border-radius: 0 0 16px 16px;
+    box-shadow: #ff0149a6 0px 0px 25px;
+}
+
+.banner {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    width: 100%;	
+    filter: opacity(.8);
+    box-shadow: #ff0149a6 0px 0px 35px;
+}
+
+.banner_bottom {
+    display: flex;
+    align-items: baseline;
+    position: absolute;
+    left: 32px;
+    top: 350px;
+}
+
+.capa {
+    width: 320px;
+    height: 320px;
+    border: 4px solid #FF0149;
+    border-radius: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: #ff0149a6 0px 0px 25px;
+}
+
+.capa img {
+    width: 100%;
+    height: auto;
+}
+
+.title_pag_curso {
+    margin-left: 32px;
+    font-family: 'Anton-Regular', monospace;
+    color: #ffffff;
+    font-size: 40pt;
+    font-weight: bold;
+}
+
+.banner_desc {
+    margin-top: 64px;
+    padding: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 64px;
+}
+
+.desc_curso {
+    width: 70%;
+    text-align: justify;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 18pt;
+}
+
+.mod_cursos {
+    width: 100%;
+    padding: 32px 64px 64px 64px;
+    border-top: 2px dotted #FF0149;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.title_mod_curso {
+    font-family: 'Anton-Regular', monospace;
+    color: #ffffff;
+    font-size: 32pt;
+    font-weight: bold;
+}
+
+.cards_mod {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 256px 256px 256px;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card_mod {
+    width: 256px;
+    height: 320px;
+    border: 2px solid #FF0149;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.capa_card_mod {
+    width: 100%;
+    height: 128px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.capa_card_mod img {
+    width: 100%;
+    height: auto;
+}
+
+.title_mod {
+    font-family: 'Anton-Regular', monospace;
+    color: #ffffff;
+    font-size: 16pt;
+    letter-spacing: 1px;
+}
+
+.desc_mod {
+    width: 90%;
+    text-align: justify;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 11pt;
+    overflow: auto;
+    padding-bottom: 32px;
+}
+
+.desc_mod::-webkit-scrollbar {
+    width: 0;
+}
+
+.desc_mod:hover ~ .hover_card {
+    opacity: 100;
+}
+
+.hover_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: #FF0149;
+    opacity: 0;
+    background: rgb(255,1,73);
+    background: linear-gradient(0deg, rgba(255,1,73,0.8) 0%, rgba(255,1,73,0) 100%);
+    transition: all ease .3s;
+}
+
+.hover_card:hover {
+    opacity: 100;
+}
+
+.hover_card img {
+    width: 24px;
+    height: auto;
+}
+
+.banner_btn_svd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn_curso {
+    width: 220px;
+    height: 48px;
+    border-radius: 16px;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.btn_curso_atv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #00ff62;
+    width: 220px;
+    height: 48px;
+    border-radius: 16px;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #00ff62;
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: #00ff6253 0px 0px 25px;
+}
+
+.btn_curso_atv:hover {
+    background: #00ff62;
+    color: #ffffff;
+}
+
+#form_salvos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#form_salvos label {
+    cursor: pointer;
+}
+
+#submit_saved {
+    position: absolute;
+    visibility: hidden;
+}
+
+.tam_img_salvos {
+    width: 24px;
+    height: auto;
+}

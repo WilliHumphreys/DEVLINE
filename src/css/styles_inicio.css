@@ -1,0 +1,102 @@
+body {
+    width: 100%;
+}
+
+main#first_view {
+    width: 100%;
+    padding: 64px 64px 0 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section#lp_left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+section#lp_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.lp_content {
+    width: 50%;
+}
+
+h1.title {
+    height: 350px;
+    font-family: 'Anton-Regular', sans-serif;
+    color: #ffffff;
+    font-size: 62pt;
+    text-shadow: #ffffff 1px 0 2px;
+}
+
+p.text {
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+section#lp_content {
+    width: 100%;
+    height: 1200px;
+    padding: 0px 64px 0 64px;
+    background-image: url(../img/WAVES_BACKGROUND_01.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+
+}
+
+section#lp_cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+section.card {
+    width: 224px;
+    height: 352px;
+    padding: 0 8px 0 8px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #FF0149;
+    background-color: #020014;
+    cursor: default;
+    transition: transform 0.3s;
+}
+
+section.card:hover {
+    transform: translateY(-10px);
+    box-shadow: #FF014980 0px 0px 25px 0px;
+}
+
+h2.card_title {
+    text-align: center;
+    font-family: 'Anton-Regular', sans-serif;
+    color: #ffffff;
+    font-size: 16pt;
+    letter-spacing: 1px;
+}
+
+p.content_card {
+    text-align: center;
+    width: 200px;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 14pt;
+}

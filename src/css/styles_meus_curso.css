@@ -1,0 +1,125 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/WAVES_BACKGROUND_01.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 -500px;
+}
+
+#logo {
+    width: auto;
+    height: 47px;
+    position: absolute;
+    top: 22px;
+    left: 64px;
+}
+
+.main_meus_cursos {
+    width: 100%;
+    margin-top: 96px;
+    padding: 32px 64px 64px 64px;
+    margin-bottom: 128px;
+}
+
+.title_meus_cursos {
+    font-family: 'Anton-Regular', monospace;
+    color: #ffffff;
+    font-size: 32pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 64px;
+}
+
+.container_cursos {
+    width: 100%;
+    padding: 16px 64px 64px 64px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 320px 320px 320px;
+    gap: 32px;
+}
+
+.container_cursos_favs {
+    width: 100%;
+    padding: 16px 64px 64px 64px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 512px 512px;
+    gap: 32px;
+}
+
+.card_cursos {
+    width: 100%;
+    height: 256px;
+    border: 2px solid #ff0149;
+    border-radius: 8px 16px 8px 16px;
+    box-shadow: #ff0149a6 0px 0px 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_cursos img {
+    width: 100%;
+    height: auto;
+}
+
+.card_cursos_favs {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ff0149;
+    border-radius: 8px 16px 8px 16px;
+    box-shadow: #ff0149a6 0px 0px 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_cursos_favs video {
+    width: 100%;
+    height: auto;
+}
+
+.title_card_cursos {
+    width: 100%;
+    background: rgb(2, 0, 20);
+    background: linear-gradient(180deg, rgba(2, 0, 20, 1.5) 0%, rgba(2, 0, 20, 0.025) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px;
+    padding-bottom: 25%;
+    font-family: 'Anton-Regular', monospace;
+    color: #ffffff;
+    font-size: 18pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.align_msg_error_meus_cursos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.msg_error_meus_cursos {
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 18pt;
+}
+
+.capa_favs_mod {
+    width: 100%;
+    height: 100%;
+}
+
+.capa_favs_mod > img {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,129 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#logo {
+    width: auto;
+    height: 47px;
+    position: absolute;
+    top: 22px;
+    left: 64px;
+}
+
+.main_contas_profissionais {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.main_cont_prof_sec {
+    width: 50%;
+    height: 100%;
+}
+
+.left {
+    margin-top: 64px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/WAVES_BACKGROUND_02.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 64px;
+}
+
+.left h2 {
+    font-family: 'Anton-Regular', sans-serif;
+    color: #ffffff;
+    font-size: 46pt;
+    text-shadow: #ffffff 1px 0 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.left p {
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 24pt;
+    font-weight: bold;
+    width: 90%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+    padding: 32px;
+    overflow: auto;
+    overflow-x: hidden;
+    border-left: 2px solid #FF0149;
+    box-shadow: #ff0149a6 0px 0px 25px;
+}
+
+.right::-webkit-scrollbar {
+    width: 12px;
+}
+  
+.right::-webkit-scrollbar-track {
+    background: #440013;
+}
+  
+.right::-webkit-scrollbar-thumb {
+    background-color: #FF0149; 
+    border-radius: 20px;
+    border: 3px solid #440013;
+}
+
+.card_cont_prof {
+    padding: 32px;
+    width: 560px;
+    background: #020014;
+    border: 2px solid #FF0149;
+    border-radius: 16px;
+    box-shadow: #ff0149a6 0px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.card_cont_prof span{
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 18pt;
+}
+
+.card_cont_prof span p strong {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #FF0149;
+}
+
+.align_btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.btn_aceitar {
+    width: 160px;
+    background: #00ff62;
+    border: #00ff62;
+}
+
+.btn_aceitar:hover {
+    background: #00ff62;
+    border: #00ff62;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 10px 0px;
+    transition: .3s; 
+}
+
+.btn_recusar {
+    width: 160px;
+}

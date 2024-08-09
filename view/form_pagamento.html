@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Page Title</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='../src/css/styles_form_pagamento.css'>
+        <noscript><meta http-equiv="refresh" content="0; URL='./error_js_disable.html '"/></noscript>
+    </head>
+    <body>
+        <section class="sec_form_pag">
+            <section id="flipper">
+                <section class="cred_card front" id="cred_card_id">
+                    <section class="sec_card_flag">
+                        <img class="img_chip" src="../src/img/CHIP_CARD.png">
+                        <img id="img_flag" class="img_flag" src="../src/img/LOGO_DV.png">
+                    </section>
+                    <section class="sec_card_num">
+                        <span id="span_num" class="span_num">0000 0000 0000 0000</span>
+                    </section>
+                    <section class="sec_name_date">
+                        <span id="span_name" class="span_name">WILLI G HUMPHREYS</span>
+                        <span id="span_date" class="span_date">00/00</span>
+                    </section>
+                </section>
+                <section class="cred_card back">
+                    <section class="sec_card_bar">
+                        <p>Platinum</p>
+                        <img class="img_flag" src="../src/img/HOLOGRAM.png">
+                    </section>
+                    <section class="sec_card_img_cvv">
+                        <img src="../src/img/AGUIA_CARD.png">
+                    </section>
+                    <section class="sec_cvv">
+                        
+                        <span id="span_cvv" class="span_cvv">CVV</span>
+                    </section>
+                </section>
+            </section>
+            <section class="form_mod_form_pag">
+                <section class="input-group">
+                    <input name="num_card" type="text" id="input_num_card" class="input-group__input required formatarCampo"  maxlength="19" required onclick="return_cvv()">
+                    <label for="input_num_card" class="input-group__label msg_required" onclick="return_cvv()">Numero do cartão</label>
+                </section>
+                <section class="input-group">
+                    <input name="name_card" type="text" id="input_name_card" class="input-group__input required formatarCampo"  maxlength="19" required onclick="return_cvv()">
+                    <label for="input_name_card" class="input-group__label msg_required" onclick="return_cvv()">Nome do titular</label>
+                </section>
+                <section class="input-group">
+                    <input name="validade_card" type="text" id="input_date_card" class="input-group__input required formatarCampo"  maxlength="5" required onclick="return_cvv()">
+                    <label for="input_date_card" class="input-group__label msg_required" onclick="return_cvv()">Vencimento</label>
+                </section>
+                <section class="input-group">
+                    <input name="cvv_card" type="text" id="input_cvv_card" class="input-group__input required formatarCampo"  maxlength="3" required onclick="flipper_func()">
+                    <label for="input_cvv_card" class="input-group__label msg_required" onclick="flipper_func()">CVC</label>
+                </section>
+                <input type="submit" name="submit_form_pag" id="submit_form_pag">
+                <label for="submit_form_pag"><section class="button medium btn_form_pag">Confirmar</section></label>
+            </section>
+        </section>
+        <script>
+            var num_card = document.getElementById('span_num');
+            var name_card = document.getElementById('span_name');
+            var date_card = document.getElementById('span_date');
+            var cvv_card = document.getElementById('span_cvv');
+            var input_num_card = document.getElementById('input_num_card');
+            var input_name_card = document.getElementById('input_name_card');
+            var input_date_card = document.getElementById('input_date_card');
+            var input_cvv_card = document.getElementById('input_cvv_card');
+            var img_flag = document.getElementById('img_flag');
+            var card = document.getElementById('cred_card_id');
+            var flipper = document.getElementById('flipper');
+            var cred_card  = document.querySelectorAll('.cred_card ');
+            var front = document.querySelector('.front');
+            var back = document.querySelector('.back');
+            var cvv_click = 0;
+
+            input_num_card.addEventListener("keyup", alterar_num);
+            input_name_card.addEventListener("keyup", alterar_name);
+            input_date_card.addEventListener("keyup", alterar_date);
+            input_cvv_card.addEventListener("keyup", alterar_cvv);
+
+            function alterar_num(e) {
+                var num = e.target.value;
+                var v=e.target.value.replace(/\D/g,"");
+
+                num_card.innerText=num;
+                v=v.replace(/(\d{4})(\d)/,"$1 $2");
+                v=v.replace(/(\d{4})(\d)/,"$1 $2");
+                v=v.replace(/(\d{4})(\d)/,"$1 $2");
+                e.target.value = v;
+
+                if (num == "") {
+                    img_flag.src = "../src/img/LOGO_DV.png";
+                    num_card.innerText="0000 0000 0000 0000";
+                    cred_card[0].style.background = "linear-gradient(230deg, rgba(101, 0, 32, 0.7) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(122, 0, 34, 0.6) 100%)";
+                    cred_card[1].style.background = "linear-gradient(230deg, rgba(101, 0, 32, 0.7) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(122, 0, 34, 0.6) 100%)";
+                }else if (num[0] == 5 && num[1] <= 5 && num[1] != 0) {
+                    img_flag.src = "../src/img/MASTERCARD.png";
+                    cred_card[0].style.background = "linear-gradient(165deg, rgba(235, 0, 27, 0.600) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(247, 158, 27, 0.400) 100%)";
+                    cred_card[1].style.background = "linear-gradient(165deg, rgba(235, 0, 27, 0.600) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(247, 158, 27, 0.400) 100%)";
+                }else if (num[0] == 4) {
+                    img_flag.src = "../src/img/VISA.png";
+                    cred_card[0].style.background = "linear-gradient(130deg, rgba(26, 30, 113, 0.600) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(202, 151, 9, 0.400) 100%)";
+                    cred_card[1].style.background = "linear-gradient(130deg, rgba(26, 30, 113, 0.600) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(202, 151, 9, 0.400) 100%)";
+                }else if (num[0] == 3 && num[1] == 1) {
+                    img_flag.src = "../src/img/ELO.png";
+                    cred_card[0].style.background = "linear-gradient(210deg, rgba(0,64,127, 0.600) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(235, 0, 27, 0.400) 100%)";
+                    cred_card[1].style.background = "linear-gradient(210deg, rgba(0,64,127, 0.600) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(235, 0, 27, 0.400) 100%)";
+                }else if (num[0] == 3 && num[1] == 6 || num[0] == 3 && num[1] == 8) {
+                    img_flag.src = "../src/img/DINERS_CLUB.png";
+                    cred_card[0].style.background = "linear-gradient(230deg, rgba(0,101,235, 0.3) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(255,255,255, 0.2) 100%)";
+                    cred_card[1].style.background = "linear-gradient(230deg, rgba(0,101,235, 0.3) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(255,255,255, 0.2) 100%)";
+                }else if (num[0] == 6 && num[1] == 0 && num[2] == 1 && num[3] == 1 || num[0] == 6 && num[1] == 5) {
+                    img_flag.src = "../src/img/DISCOVER.png";
+                    cred_card[0].style.background = "linear-gradient(250deg, rgba(255,255,255, 0.2) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(255,104,0,0.3) 100%)";
+                    cred_card[1].style.background = "linear-gradient(250deg, rgba(255,255,255, 0.2) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(255,104,0,0.3) 100%)";
+                }else if (num[0] == 3 && num[1] == 5) {
+                    img_flag.src = "../src/img/JCB.png";
+                    cred_card[0].style.background = "linear-gradient(195deg, rgba(0,101,235, 0.3) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(0,235,101, 0.3) 100%)";
+                    cred_card[1].style.background = "linear-gradient(195deg, rgba(0,101,235, 0.3) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(0,235,101, 0.3) 100%)";
+                }else if (num[0] == 3 && num[1] == 4 || num[0] == 3 && num[1] == 7) {
+                    img_flag.src = "../src/img/AMERICAN_EXPRESS.png";
+                    cred_card[0].style.background = "linear-gradient(45deg, rgba(0,101,235, 0.3) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(0,101,235, 0.3) 100%)";
+                    cred_card[1].style.background = "linear-gradient(45deg, rgba(0,101,235, 0.3) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(0,101,235, 0.3) 100%)";
+                }else{
+                    img_flag.src = "../src/img/LOGO_DV.png";
+                    cred_card[0].style.background = "linear-gradient(230deg, rgba(101, 0, 32, 0.7) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(122, 0, 34, 0.6) 100%)";
+                    cred_card[1].style.background = "linear-gradient(230deg, rgba(101, 0, 32, 0.7) 0%, rgba(4, 0, 40, 0.718) 40%, rgba(6, 1, 42, 0.734) 60%, rgba(122, 0, 34, 0.6) 100%)";
+                }
+            }
+
+            function alterar_name(e) {
+                var name = e.target.value.toUpperCase();
+                var v=e.target.value.toUpperCase();
+
+                e.target.value = v;
+                name_card.innerText=name;
+
+                if (name == "") {
+                    name_card.innerText="WILLI G HUMPHREYS";
+                }
+            }
+
+            function alterar_date(e) {
+                var date = e.target.value.replace(/(\d{2})(\d)/,"$1/$2");
+                var v=e.target.value.replace(/\D/g,"");
+
+                date_card.innerText=date;
+
+                v=v.replace(/(\d{2})(\d)/,"$1/$2");
+                e.target.value = v;
+
+                if (date == "") {
+                    date_card.innerText="00/00";
+                }
+            }
+
+            function return_cvv() {
+                if (cvv_click == 1) {
+                    cvv_click = 0;
+                    flipper.style.transition = "transform 0.8s";
+                    flipper.style.transform = "rotateY(360deg)";
+                    setTimeout(() => {
+                        back.style.display = 'none';
+                        front.style.display = 'flex';
+                    }, 300);
+                }
+            }
+
+            function alterar_cvv(e) {
+                var cvv = e.target.value;
+
+                cvv_card.innerText=cvv;
+
+                if (cvv == "") {
+                    cvv_card.innerText="CVC";
+                }
+            }
+
+            function flipper_func(e) {
+                cvv_click = 1;
+                flipper.style.transition = "transform 0.8s";
+                flipper.style.transform = "rotateY(180deg)";
+                setTimeout(() => {
+                    front.style.display = 'none';
+                    back.style.display = 'flex';
+                }, 300);
+            }
+        </script>
+    </body>
+</html>

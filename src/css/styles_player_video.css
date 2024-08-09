@@ -1,0 +1,131 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/WAVES_BACKGROUND_01.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 -550px;
+}
+
+#logo {
+    width: auto;
+    height: 47px;
+    position: absolute;
+    top: 22px;
+    left: 64px;
+}
+
+.main_player_video {
+    margin-top: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.video_player {
+    width: 800px;
+    height: 400px;
+    border: 2px solid #ff0149;
+    border-radius: 4px 10px 4px 10px;
+    box-shadow: #ff014965 0px 0px 20px;
+    background: #020014;
+    overflow: hidden;
+}
+
+.video_player > iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.title_curso {
+    font-family: 'Anton-Regular', monospace;
+    color: #ffffff;
+    font-size: 36pt;
+}
+
+.align_fav {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.title_modulo {
+    font-family: 'Anton-Regular', monospace;
+    color: #ffffff;
+    font-size: 22pt;
+}
+
+.desc_modulo {
+    margin-top: 32px;
+    width: 800px;
+    text-align: justify;
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 12pt;
+}
+
+.list_mods {
+    width: auto;
+    height: 400px;
+    border: 2px solid #ff0149;
+    border-radius: 4px 10px 4px 10px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    box-shadow: #ff014965 0px 0px 20px;
+    background: #020014;
+}
+
+.list_mods::-webkit-scrollbar {
+    width: 12px;
+}
+  
+.list_mods::-webkit-scrollbar-track {
+    background: #440013;
+}
+  
+.list_mods::-webkit-scrollbar-thumb {
+    background-color: #FF0149; 
+    border-radius: 20px;
+    border: 3px solid #440013;
+}
+
+.list_mods_item {
+    width: 360px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+    border: 2px solid #ff0149;
+    border-radius: 4px 10px 4px 10px;
+    box-shadow: #ff014965 0px 0px 20px;
+}
+
+.capa_list_mod {
+    width: 120px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.capa_list_mod > img {
+    width: 100%;
+    height: auto;
+}
+
+.text_list_mod {
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 11pt;
+    font-weight: bold;
+}

@@ -1,0 +1,79 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.main_painel_packs {
+    padding-top: 92px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-image: url(../img/WAVES_BACKGROUND_01.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 -600px;
+}
+
+.sec_painel_packs {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 64px 0 0 128px;
+}
+
+.right img {
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: auto;
+}
+
+.title_left_packs {
+    padding-bottom: 32px;
+    font-family: 'Anton-Regular', monospace;
+    color: #ffffff;
+    font-size: 40pt;
+    line-height: 60px;
+    text-align: left;
+}
+
+.card_painel_packs {
+    width: 86.6mm;
+    height: 53.88mm;
+    padding: 16px;
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card_painel_packs h2 {
+    padding-bottom: 16px;
+    font-family: 'Anton-Regular', monospace;
+    color: #ffffff;
+    font-size: 24pt;
+    text-align: left;
+}
+
+.card_painel_packs p {
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #FF0149;
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card_painel_packs span {
+    font-family: 'AnonymousPro-Regular', monospace;
+    color: #ffffff;
+    font-size: 14pt;
+    text-transform: uppercase;
+}
